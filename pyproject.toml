@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pandasxl"
+version = "0.1.0"
+description = "Python library for exporting pandas DataFrames to Excel with customizable layouts, styling, and formatting."
+license = { file = "license.md" }
+authors = [
+    { name = "L.C. Vriend", email = "vanboefer@gmail.com" }
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "pandas",
+    "openpyxl",
+]
+requires-python = ">=3.10"
+
+[project.urls]
+Homepage = "https://github.com/lcvriend/pandas-xl"
