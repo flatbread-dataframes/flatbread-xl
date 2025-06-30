@@ -6,7 +6,7 @@ import numpy as np
 from openpyxl.cell import Cell
 from openpyxl.worksheet.worksheet import Worksheet
 
-from uvmlib.export.formatter import spans
+from pandasxl import spans
 from pandasxl.layout import TableLayout, CellPosition
 from pandasxl.pattern import PatternMatcher
 from pandasxl.merge import MergeManager
@@ -57,6 +57,7 @@ class ExcelTableWriter:
         worksheet: Worksheet,
         x_offset: int = 0,
         y_offset: int = 0,
+        min_border_level: int = 1,
         default_number_format: str | None = None,
         number_formats: dict | None = None,
         border_specs: Any | None = None,
@@ -84,6 +85,7 @@ class ExcelTableWriter:
         self.df = df
         self.worksheet = worksheet
         self.layout = TableLayout.from_df(df, x_offset, y_offset)
+        self.min_border_level = min_border_level
         self.default_number_format = default_number_format
 
         self.style_manager = StyleManager(default_styles={
@@ -273,7 +275,7 @@ class ExcelTableWriter:
             self.layout,
             row_spans,
             column_spans,
-            min_border_level=1,
+            min_border_level=self.min_border_level,
         )
         self.border_manager.add_custom_borders(
             self.layout,
