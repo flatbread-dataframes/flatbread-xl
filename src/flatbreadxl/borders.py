@@ -1,12 +1,10 @@
-# border.py
 from typing import Any
 
-import pandas as pd
 from openpyxl.worksheet.worksheet import Worksheet
 from openpyxl.styles import Border, Side
 
-from pandasxl.layout import TableLayout, CellPosition
-from pandasxl.style import BorderStyle
+from flatbreadxl.layout import TableLayout, CellPosition
+from flatbreadxl.style import BorderStyle
 
 
 class BorderManager:

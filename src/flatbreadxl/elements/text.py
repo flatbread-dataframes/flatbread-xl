@@ -1,11 +1,10 @@
-# uvmlib/export/elements/text.py
-from typing import Optional, Dict, Any
+from typing import Any
 
 from openpyxl.worksheet.worksheet import Worksheet
 
-from pandasxl.layout import CellPosition
-from pandasxl.style import HorizontalAlignment, VerticalAlignment
-from pandasxl.elements.base import WorksheetElement
+from flatbreadxl.layout import CellPosition
+from flatbreadxl.style import HorizontalAlignment, VerticalAlignment
+from flatbreadxl.elements.base import WorksheetElement
 
 
 class TextElement(WorksheetElement):
@@ -69,7 +68,7 @@ class TextElement(WorksheetElement):
         else:
             self.style = self._get_preset_style(style_preset)
 
-    def _get_preset_style(self, preset: str) -> Dict[str, Any]:
+    def _get_preset_style(self, preset: str) -> dict[str, Any]:
         """Get a style preset by name."""
         presets = {
             "default": self.DEFAULT_STYLE,

@@ -1,6 +1,4 @@
-# File: uvmlib/export/formatter/pattern.py
-
-from typing import Any, List, Dict, Tuple, Union, Optional, TypeVar, Generic
+from typing import Any, Optional, TypeVar
 
 import pandas as pd
 
@@ -48,7 +46,7 @@ class PatternMatcher:
         return False
 
     @staticmethod
-    def _tuple_contains_match(label_tuple: Tuple, pattern: Any) -> bool:
+    def _tuple_contains_match(label_tuple: tuple, pattern: Any) -> bool:
         """
         Check if any part of a tuple label matches the pattern.
 
@@ -77,7 +75,7 @@ class PatternMatcher:
         return False
 
     @staticmethod
-    def find_match(label: Any, patterns: List[Tuple[PatternSpec, T]]) -> Optional[T]:
+    def find_match(label: Any, patterns: list[tuple[PatternSpec, T]]) -> Optional[T]:
         """
         Find the first matching value for a label from a list of pattern-value pairs.
 
@@ -100,9 +98,9 @@ class PatternMatcher:
 
     @staticmethod
     def create_position_map(
-        labels: Union[pd.Index, List],
-        patterns: List[Tuple[PatternSpec, T]]
-    ) -> List[Optional[T]]:
+        labels: pd.Index|list,
+        patterns: list[tuple[PatternSpec, T]]
+    ) -> list[Optional[T]]:
         """
         Create a position-based map of values for each label.
 
@@ -129,8 +127,8 @@ class PatternMatcher:
 
     @staticmethod
     def process_spec_dict(
-        spec_dict: Dict[str, Any]
-    ) -> Tuple[List[Tuple[PatternSpec, T]], List[Tuple[PatternSpec, T]]]:
+        spec_dict: dict[str, Any]
+    ) -> tuple[list[tuple[PatternSpec, T]], list[tuple[PatternSpec, T]]]:
         """
         Process a specification dictionary with 'rows' and 'columns' keys into usable patterns.
 

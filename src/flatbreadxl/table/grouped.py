@@ -1,11 +1,10 @@
-# uvmlib/export/formatter/grouped.py
 from typing import Any
 
 import pandas as pd
 from openpyxl.worksheet.worksheet import Worksheet
 
-from pandasxl.table.writer import ExcelTableWriter
-from pandasxl.style import HorizontalAlignment, VerticalAlignment
+from flatbreadxl.table.writer import ExcelTableWriter
+from flatbreadxl.style import HorizontalAlignment, VerticalAlignment
 
 
 class GroupHeaderValue:

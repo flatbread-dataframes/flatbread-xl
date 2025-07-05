@@ -1,7 +1,7 @@
 from typing import Any
 
 import pandas as pd
-from pandasxl.layout import TableLayout, CellPosition
+from flatbreadxl.layout import TableLayout, CellPosition
 
 
 def get_contiguous_spans(values: list[Any]) -> list[dict[str, Any]]:

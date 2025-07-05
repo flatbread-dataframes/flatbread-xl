@@ -4,8 +4,8 @@ from typing import Any, cast
 from openpyxl.worksheet.worksheet import Worksheet
 from openpyxl.cell import Cell
 
-from pandasxl.layout import CellPosition, BaseLayout
-from pandasxl.style import StyleManager
+from flatbreadxl.layout import CellPosition, BaseLayout
+from flatbreadxl.style import StyleManager
 
 
 class WorksheetElement:

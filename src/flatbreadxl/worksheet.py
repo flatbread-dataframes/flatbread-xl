@@ -1,14 +1,13 @@
-# uvmlib/export/worksheet.py
 from pathlib import Path
 from typing import Any
 
 import pandas as pd
 from openpyxl import Workbook, load_workbook
 
-from pandasxl.elements.base import WorksheetElement
-from pandasxl.elements.text import TextElement, MultiColumnTextElement
-from pandasxl.elements.table import TableElement, GroupedTableElement
-from pandasxl.layout import CellPosition
+from flatbreadxl.elements.base import WorksheetElement
+from flatbreadxl.elements.text import TextElement, MultiColumnTextElement
+from flatbreadxl.elements.table import TableElement, GroupedTableElement
+from flatbreadxl.layout import CellPosition
 
 
 class WorksheetManager:

@@ -6,12 +6,12 @@ import numpy as np
 from openpyxl.cell import Cell
 from openpyxl.worksheet.worksheet import Worksheet
 
-from pandasxl import spans
-from pandasxl.layout import TableLayout, CellPosition
-from pandasxl.pattern import PatternMatcher
-from pandasxl.merge import MergeManager
-from pandasxl.borders import BorderManager
-from pandasxl.style import (
+from flatbreadxl import spans
+from flatbreadxl.layout import TableLayout, CellPosition
+from flatbreadxl.pattern import PatternMatcher
+from flatbreadxl.merge import MergeManager
+from flatbreadxl.borders import BorderManager
+from flatbreadxl.style import (
     StyleManager,
     HorizontalAlignment,
     VerticalAlignment,

@@ -1,11 +1,11 @@
 import pandas as pd
 from openpyxl.worksheet.worksheet import Worksheet
 
-from pandasxl.layout import TableLayout
-from pandasxl.table.writer import ExcelTableWriter
-from pandasxl.table.grouped import GroupedExcelTableWriter
-from pandasxl.elements.base import WorksheetElement
-from pandasxl.elements.text import TextElement
+from flatbreadxl.layout import TableLayout
+from flatbreadxl.table.writer import ExcelTableWriter
+from flatbreadxl.table.grouped import GroupedExcelTableWriter
+from flatbreadxl.elements.base import WorksheetElement
+from flatbreadxl.elements.text import TextElement
 
 
 class TableElement(WorksheetElement):

@@ -1,4 +1,4 @@
-# PandasXL: DataFrame to Excel Export with Custom Styling
+# FlatbreadXL: DataFrame to Excel Export with Custom Styling
 
 Python library for exporting pandas DataFrames to Excel with formatting control. Handles hierarchical indices, layouts, pattern-based styling, and grouped data.
 
